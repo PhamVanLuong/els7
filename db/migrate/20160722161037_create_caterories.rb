@@ -1,0 +1,9 @@
+class CreateCaterories < ActiveRecord::Migration[5.0]
+  def change
+    create_table :caterories do |t|
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end
