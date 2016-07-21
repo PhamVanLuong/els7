@@ -1,0 +1,15 @@
+vi:
+  title:
+    home: 'Trang Chủ'
+    help: 'Trợ Giúp'
+    login: "Đăng Nhập"
+    language: "Ngôn ngữ"
+
+  product:
+    signup: "Đăng ký ngay!"
+    welcome: "Chào mừng vào trang web"
+
+  footer:
+    small: "Dự án được tạp bởi nhóm G"
+    about: "Thông tin"
+    contact: "Liên hệ"

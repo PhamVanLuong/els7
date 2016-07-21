@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title:
+    home: 'Home'
+    help: 'Help'
+    login: "Log in"
+    language: "Language"
+  product:
+    signup: "Sign up now!"
+    welcome: "Welcome to the App"
+  footer:
+    small: "The App by Team G"
+    about: "About"
+    contact: "Contact"
