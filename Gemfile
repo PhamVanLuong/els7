@@ -9,6 +9,7 @@ gem "jquery-rails"
 gem "jbuilder", "~> 2.0"
 gem "turbolinks"
 gem "mysql2", "~> 0.3.18"
+gem "config", "1.2.1"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "bcrypt", "~> 3.1.7"
