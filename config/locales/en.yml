@@ -17,3 +17,7 @@ en:
     home: "Home"
     login: "Login"
     signup: "Sign Up"
+  flash:
+    welcome: "Sing up successfully! Welcome to my page"
+  new:
+    create_account: "Create my account"
