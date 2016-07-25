@@ -4,6 +4,8 @@ en:
     text: "error"
   flash:
     welcome: "Sign up successfully! Welcome to my page"
+    danger: "Please log in."
+    update_fail: "Error update"
   footer:
     small: "Project 1 - G team"
   header:
@@ -32,3 +34,8 @@ en:
     log_out: "Logout"
     ancount: "Ancount"
     new_user: "New users ?"
+  edit:
+    user: Edit user
+    update: "Update your profile"
+    change: "Save changes"
+    update_profile: "Profile updated"
