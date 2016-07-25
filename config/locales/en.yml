@@ -15,9 +15,17 @@ en:
     contact: "Contact"
     help: "Help"
     home: "Home"
-    login: "Login"
+    login: "Log in"
     signup: "Sign Up"
   flash:
     welcome: "Sing up successfully! Welcome to my page"
   new:
     create_account: "Create my account"
+  user:
+    invalid: "Invalid email/password combination"
+    user: "User"
+    profile: "Profile"
+    settings: "Settings"
+    log_out: "Logout"
+    ancount: "Ancount"
+    new_user: "New users ?"
