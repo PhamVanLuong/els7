@@ -1,4 +1,9 @@
 en:
+  error:
+    errors: "The form contains "
+    text: "error"
+  flash:
+    welcome: "Sign up successfully! Welcome to my page"
   footer:
     small: "Project 1 - G team"
   header:
@@ -8,7 +13,9 @@ en:
   home:
     pragraph: "We hope that my page will be useful with you"
     signup: "Sign up now!"
-    welcome: "Welcome to our app"  
+    welcome: "Welcome to our app"
+  new:
+    create_account: "Create my account"
   title:
     about: "About"
     base_title: "ELS 7"
@@ -17,10 +24,6 @@ en:
     home: "Home"
     login: "Log in"
     signup: "Sign Up"
-  flash:
-    welcome: "Sing up successfully! Welcome to my page"
-  new:
-    create_account: "Create my account"
   user:
     invalid: "Invalid email/password combination"
     user: "User"
