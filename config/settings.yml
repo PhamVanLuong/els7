@@ -1,3 +1,5 @@
 maximum_name: 20
 maximum_email: 100
 minimum_password: 6
+maximum_word: 50
+maximum_meaning: 100

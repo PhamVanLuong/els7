@@ -1,0 +1,12 @@
+<%= form_for(@word) do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :word %>
+  <%= f.text_field :learning_word, class: "form-control" %>
+
+  <%= f.label :meanig %>
+  <%= f.text_field :meaning, class: "form-control" %>
+
+  <%= f.submit t("word.title"), class: "btn btn-primary" %>
+<% end %>
+
