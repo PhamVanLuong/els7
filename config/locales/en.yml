@@ -1,4 +1,12 @@
 en:
+  category:
+    label: "New Category"
+    title: "Create new category"
+  edit:
+    edit:change: "Save changes"
+    user: Edit user
+    update: "Update your profile"
+    update_profile: "Profile updated"
   error:
     errors: "The form contains "
     text: "error"
@@ -6,8 +14,10 @@ en:
     welcome: "Sign up successfully! Welcome to my page"
     danger: "Please log in."
     update_fail: "Error update"
-    failed_word: "Failed to create new word"
-    success_word: "Created successfully"
+    create_failed: "Failed to create"
+    success_created: "Created successfully"
+  form:
+    create: "Create"
   footer:
     small: "Project 1 - G team"
   header:
@@ -18,6 +28,8 @@ en:
     pragraph: "We hope that my page will be useful with you"
     signup: "Sign up now!"
     welcome: "Welcome to our app"
+  index:
+    all: "All users"
   login:
     remember: "Remember me on this computer"
   new:
@@ -31,21 +43,14 @@ en:
     login: "Log in"
     signup: "Sign Up"
   user:
+    ancount: "Ancount"
     invalid: "Invalid email/password combination"
+    log_out: "Logout"
+    new_user: "New users ?"
     user: "Users"
     profile: "Profile"
     settings: "Settings"
-    log_out: "Logout"
-    ancount: "Ancount"
-    new_user: "New users ?"
-  edit:
-    user: Edit user
-    update: "Update your profile"
-    change: "Save changes"
-    update_profile: "Profile updated"
-  index:
-    all: "All users"
   word:
-    title: "Create new word"
     label: "New Word"
     list: "Word List"
+    title: "Create new word"
