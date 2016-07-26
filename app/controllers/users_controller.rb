@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
 
   def index
@@ -37,6 +37,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+  end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    if @user.destroy
+      flash[:success] = t("danger.delete_success")
+    else
+      flash[:danger] = t("danger.delete.fails")
+    end
+    redirect_to users_url
   end
 
   private

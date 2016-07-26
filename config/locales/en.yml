@@ -6,6 +6,9 @@ en:
     welcome: "Sign up successfully! Welcome to my page"
     danger: "Please log in."
     update_fail: "Error update"
+    delete_success: "User deleted"
+    delete_fail: "Error delete"
+
   footer:
     small: "Project 1 - G team"
   header:
