@@ -6,6 +6,8 @@ en:
     welcome: "Sign up successfully! Welcome to my page"
     danger: "Please log in."
     update_fail: "Error update"
+    failed_word: "Failed to create new word"
+    success_word: "Created successfully"
   footer:
     small: "Project 1 - G team"
   header:
@@ -43,3 +45,7 @@ en:
     update_profile: "Profile updated"
   index:
     all: "All users"
+  word:
+    title: "Create new word"
+    label: "New Word"
+    list: "Word List"
