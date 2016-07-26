@@ -30,7 +30,7 @@ en:
     signup: "Sign Up"
   user:
     invalid: "Invalid email/password combination"
-    user: "User"
+    user: "Users"
     profile: "Profile"
     settings: "Settings"
     log_out: "Logout"
@@ -41,3 +41,5 @@ en:
     update: "Update your profile"
     change: "Save changes"
     update_profile: "Profile updated"
+  index:
+    all: "All users"
