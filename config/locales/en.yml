@@ -16,6 +16,8 @@ en:
     pragraph: "We hope that my page will be useful with you"
     signup: "Sign up now!"
     welcome: "Welcome to our app"
+  login:
+    remember: "Remember me on this computer"
   new:
     create_account: "Create my account"
   title:
