@@ -3,3 +3,4 @@ maximum_email: 100
 minimum_password: 6
 maximum_word: 50
 maximum_meaning: 100
+maximum_name_category: 50

@@ -3,6 +3,16 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= render "form_new_word" %>
+    <%= form_for(@word) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label :word %>
+      <%= f.text_field :learning_word, class: "form-control" %>
+
+      <%= f.label :meaning %>
+      <%= f.text_field :meaning, class: "form-control" %>
+      
+      <%= f.submit t("form.create"), class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
