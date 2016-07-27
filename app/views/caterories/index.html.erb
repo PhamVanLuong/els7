@@ -1,0 +1,10 @@
+<%= provide(:title, t("category.list")) %>
+<h1><%= t("category.list") %></h1>
+
+<ul class="inline">
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.name, category %>
+    </li>
+  <% end %>
+</ul>
