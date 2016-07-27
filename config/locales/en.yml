@@ -1,6 +1,7 @@
 en:
   category:
     label: "New Category"
+    list: "All Categories"
     title: "Create new category"
   edit:
     edit:change: "Save changes"

@@ -1,0 +1,10 @@
+<%= provide(:title, t("word.list")) %>
+<h1><%= t("word.list") %></h1>
+
+<ul class="inline">
+  <% @words.each do |word| %>
+    <li>
+      <%= link_to (word.learning_word + ": " + word.meaning), admin_word_path(word) %>
+    </li>
+  <% end %>
+</ul>
