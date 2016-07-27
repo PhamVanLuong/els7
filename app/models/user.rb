@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   before_save :email_downcase
   attr_accessor :remember_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  enum role: [:guest, :admin]
 
   has_many :lessons
   has_many :results, dependent: :destroy

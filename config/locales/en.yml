@@ -1,4 +1,15 @@
 en:
+  admin:
+    admin_confirm: "Delete user confiromation"
+    categories: "Categorories"
+    delete: "delete"
+    home: "Home"
+    logo: "ADMIN ELS7"
+    logout: "Logout"
+    users: "Users"
+    user_all: "All users"
+    words: "Words"
+
   category:
     label: "New Category"
     list: "All Categories"
@@ -45,6 +56,8 @@ en:
     signup: "Sign Up"
   user:
     ancount: "Ancount"
+    delete: "Delete success"
+    delete_fail: "Delete error"
     invalid: "Invalid email/password combination"
     log_out: "Logout"
     new_user: "New users ?"
