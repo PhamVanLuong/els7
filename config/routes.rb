@@ -8,13 +8,20 @@ Rails.application.routes.draw do
   get "login"     => "sessions#new"
   post "login"    => "sessions#create"
   delete "logout" => "sessions#destroy"
-  resources :users
+  
+  resources :users do
+    resources :followers, only: [:index]
+    resources :followings, only: [:index]
+  end
+
   namespace :admin do
     root "users#index"
     resources :users, only: [:index, :destroy]
     resources :words
     resources :caterories
   end
+  
   resources :caterories, only: [:index, :show]
   resources :words,      only: [:index, :show]
+  resources :relationships, only: [:create, :destroy]
 end
