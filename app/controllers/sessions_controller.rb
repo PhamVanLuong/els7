@@ -7,11 +7,15 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_back_or user
+      if user.admin?
+        redirect_to admin_root_url
+      else
+        redirect_to user
+      end
     else
       flash.now[:danger] = t("user.invalid")
       render :new
-    end    	
+    end
   end
 
   def destroy
