@@ -208,3 +208,22 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+#category {
+  div {
+    font-size: 200%;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+}
+
+#button-color {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

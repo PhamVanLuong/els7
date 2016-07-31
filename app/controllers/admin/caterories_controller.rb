@@ -1,16 +1,21 @@
 class Admin::CateroriesController < ApplicationController
   before_action :logged_in_user
-  before_action :find_category, only: [:show, :destroy]
+  before_action :find_category, only: [:show, :edit, :update, :destroy]
 
   def index
     @categories = Caterory.all
   end
 
   def show
+    @words = @category.words.paginate page: params[:page],
+      per_page: Settings.words_per_page
   end
 
   def new
     @category = Caterory.new
+  end
+
+  def edit
   end
 
   def create
@@ -24,8 +29,23 @@ class Admin::CateroriesController < ApplicationController
     end
   end
 
-  def destroy
+  def update
+    if @category.update_attributes(word_params)
+      flash[:success] = t("category.update_success")
+      redirect_to [:admin, @category]
+    else
+      flash.now[:danger] = t("category.update_failed")
+      render :edit
+    end
+  end
 
+  def destroy
+    if @category.destroy
+      flash[:success] = t("category.destroy")
+    else
+      flash[:danger] = t("category.destroy_failed")
+    end
+    redirect_to admin_caterories_path
   end
 
   private

@@ -1,14 +1,20 @@
 <%= provide(:title, t("category.list")) %>
 <h1><%= t("category.list") %></h1>
 
-<ul class="inline">
+<div class="col-md-8 col-md-offset-2">
   <% @categories.each do |category| %>
-    <li>
-      <%= link_to category.name, category %>
-      <button type="button" class="btn btn-primary">
-        <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
-          method: :post  %>
-      </button>
-    </li>
+    <div class="well well-lg">
+      <div class="row" id="category">
+        <div class="col col-md-4">
+          <%= link_to category.name, [:admin, category] %>
+        </div>  
+        <div class="col col-md-4" id="button-color">
+          <button type="button" class="btn btn-info btn-lg">
+            <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
+              method: :post %>
+         </button>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>

@@ -28,10 +28,9 @@ class Admin::WordsController < ApplicationController
   end
 
   def update
-    @word = Word.find_by(id: params[:id])
     if @word.update_attributes(word_params)
       flash[:success] = t("word.update_success")
-      redirect_to admin_words_path
+      redirect_to [:admin, @word]
     else
       flash.now[:danger] = t("word.update_failed")
       render :edit
