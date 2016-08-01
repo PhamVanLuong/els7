@@ -1,5 +1,5 @@
-<%= provide(:title, t("category.list")) %>
-<h1><%= t("category.list") %></h1>
+<%= provide(:title, t(".list")) %>
+<h1><%= t(".list") %></h1>
 
 <div class="col-md-8 col-md-offset-2">
   <% @categories.each do |category| %>
@@ -10,7 +10,7 @@
         </div>  
         <div class="col col-md-4" id="button-color">
           <button type="button" class="btn btn-info btn-lg">
-            <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
+            <%= link_to t(".start"), lessons_path(caterory_id: category.id),
               method: :post %>
          </button>
         </div>

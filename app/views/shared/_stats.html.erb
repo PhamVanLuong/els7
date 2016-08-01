@@ -4,12 +4,12 @@
     <strong id="following" class="stat">
       <%= @user.following.count %>
     </strong>
-    <%= t("follow.following") %>
+    <%= t("view.shared.following") %>
   </a>
   <a href="<%= user_followers_path(@user) %>">
     <strong id="followers" class="stat">
       <%= @user.followers.count %>
     </strong>
-    <%= t("follow.followers") %>
+    <%= t("view.shared.followers") %>
   </a>
 </div>

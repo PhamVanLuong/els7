@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = t("flash.welcome")
+      flash[:success] = t(".welcome")
       log_in @user
       redirect_to @user
     else
@@ -28,10 +28,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = t("edit.update_profile")
+      flash[:success] = t(".update_profile")
       redirect_to @user
     else
-      flash.now[:danger] = t("flash.update_fail")
+      flash.now[:danger] = t(".update_fail")
       render :edit
     end
   end

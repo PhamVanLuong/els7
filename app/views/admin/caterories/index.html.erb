@@ -1,5 +1,5 @@
-<%= provide(:title, t("category.list")) %>
-<h1><%= t("category.list") %></h1>
+lis<%= provide(:title, t(".list")) %>
+<h1><%= t(".list") %></h1>
 
 <div class="col-md-8 col-md-offset-2">
   <% @categories.each do |category| %>
@@ -11,14 +11,14 @@
         <div class="col col-md-4" >
           <div class="col col-md-6">
             <button type="button" class="btn btn-info btn-lg">
-              <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
+              <%= link_to t(".start"), lessons_path(caterory_id: category.id),
                 method: :post %>
             </button>
           </div>
           <div class="col col-md-6">
             <button type="button" class="btn btn-info btn-lg">
-              <%= link_to t("category.delete"), [:admin, category], method: :delete,
-                data: {confirm: t("admin.admin_confirm")} %>
+              <%= link_to t(".delete"), [:admin, category], method: :delete,
+                data: {confirm: t(".delete_confirm")} %>
             </button> 
           </div>
         </div>

@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
         redirect_to user
       end
     else
-      flash.now[:danger] = t("user.invalid")
+      flash.now[:danger] = t(".invalid")
       render :new
     end
   end

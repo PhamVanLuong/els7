@@ -2,7 +2,7 @@
 <h1><%= @category.name %></h1>
 
 <% if @category.words.empty? %>
-  <%= link_to t("category.no_word"),  new_admin_word_path,
+  <%= link_to t(".no_word"),  new_admin_word_path,
     class: "btn btn-primary" %>
 <% else %>
   <table class="table">

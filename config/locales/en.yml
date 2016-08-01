@@ -1,106 +1,184 @@
 en:
   admin:
-    admin_confirm: "Delete user confiromation"
-    categories: "Categorories"
-    delete: "delete"
-    logout: "Logout"
-    profile: "Profile"
-    settings: "Settings"
-    users: "Users"
-    user_all: "All users"
-    words: "Words"
-  activity:
-    activities: "Activities"
-    learn: "Learn "
-    start: "Started "
-    ago: " ago"
-  category:
-    delete: "Delete"
-    destroy: "Delete successfully"
-    destroy_failed: "Delete failed"
-    label: "New Category"
-    list: "All Categories"
-    no_category: "You have no category! Create one now"
-    no_word: "This category has no word! Create now"
-    title: "Create new category"
-    start: "start"
-    update_failed: "Update failed"
-    update_success: "Update successfully"
-  edit:
-    edit:change: "Save changes"
-    user: Edit user
-    update: "Update your profile"
-    update_profile: "Profile updated"
-  error:
-    errors: "The form contains "
-    text: "error"
-  flash:
-    create_failed: "Failed to create"
-    danger: "Please log in."
-    failed_lesson: "You already complete this category"
-    success_created: "Created successfully"
-    update_fail: "Error update"
-    welcome: "Sign up successfully! Welcome to my page"
-  form:
-    create: "Create"
-    update: "Update"
-  footer:
+    caterories:
+      create:
+        create_fail: “Failed to create"
+        create_success: “Created successfully"
+      update:
+        update_success:  "Update successfully"
+        update_fail: “Update fail”
+      destroy:
+        destroy: “Delete successfully”
+        destroy_fail: “Delete fail”
+    users:
+      destroy:
+        delete: "Delete success"
+        delete_fail: "Delete error"
+    words:
+      create:
+        create_fail: “Failed to create"
+        create_success: “ Created successfully”
+      destroy:
+        destroy: “Delete successfully”
+        destroy_fail: “Delete fail”
+      update:
+        update_success:  "Update successfully"
+        update_fail: “Update fail”
+  application:
+    access_admin:
+      access_admin: “Access admin”
+    logged_in_user:
+      danger: “Please log in”
+  lessons:
+    create:
+      failed_lesson: “You already complete this category”
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+  users:
+    update:
+      update_fail: "Error update"
+      update_profile: "Profile updated"
+    create:
+      Welcome: "Sign up successfully! Welcome to my page"
+  helper:
+    application: 
+      base_title: "ELS 7"
+  view:
+    footer:
+    about: "About"
+    contact: "Contact"
     small: "Project 1 - G team"
   header:
-    english: "English"
-    language: "Language"
-    vietnamese: "Vietnamese"
-  home:
-    pragraph: "We hope that my page will be useful with you"
-    signup: "Sign up now!"
-    welcome: "Welcome to our app"
-  index:
-    all: "All users"
-  login:
-    remember: "Remember me on this computer"
-  new:
-    create_account: "Create my account"
-  title:
-    about: "About"
-    base_title: "ELS 7"
-    contact: "Contact"
-    help: "Help"
-    home: "Home"
-    login: "Log in"
-    signup: "Sign Up"
-  user:
     ancount: "Ancount"
+    base_title: "ELS 7"
     categories: "Categorories"
-    delete: "Delete success"
-    delete_fail: "Delete error"
-    empty: "user empty"
-    invalid: "Invalid email/password combination"
-    log_out: "Logout"
-    new_user: "New users ?"
-    user: "Users"
-    profile: "Profile"
-    settings: "Settings"
-  word:
-    action: "Actions"
-    bar_title: "Word"
-    category: "Category"
-    delete: "Delete"
-    destroy: "Delete successfully"
-    destroy_failed: "Delete failed"
-    edit: "Edit word"
     english: "English"
-    label: "New Word"
-    label_update: "Update Word"
-    list: "Word List"
-    title: "Create new word"
-    update_failed: "Update failed"
-    update_success: "Update successfully"
+    home: "Home"
+    help: "Help"
+    language: "Language"
+    logout: "Logout"
+    profile: "Profile"
+    users: "Users"
     vietnamese: "Vietnamese"
-  follow:
-    following: "Following"
-    followers: "Followers"
-    follow: "Follow"
-    number_followers: "%{number} user followers"
-    number_following: "follwing %{number} users"
-    profile: "view my profile"
-    unfollow: "Unfollow"
+    settings: "Settings"
+    signup: "Sign Up"
+    words: "Words"
+  shared:
+    errors: "The form contains "
+    errors: "The form contains "
+    followers: “Followers”
+    following: “Following”
+    login: "Log in"
+    new_user: "New users ?"
+    remember: "Remember me on this computer"
+    signup: "Sign up now!"
+  activities:
+     _activity:
+      ago:  “ago”
+      learn: “Learn ”
+      start: “Started “
+  admin:
+    caterories:
+      new:
+        create: "Create"
+        label: "New Word"
+        title: "Create new category"
+      index:
+        delete: "delete"
+        delete_confirm: "Delete user confiromation"
+        list: “ All Categories”
+        start: "Start"
+      show:
+        no_word: "This category has no word! Create now"
+    users:
+      index:
+        delete: "delete"
+        delete_confirm: "Delete user confiromation"
+        user_all: "All users"
+    words:
+      _header_table:
+        english: "English"
+        vietnamese: "Vietnamese"
+        category: "Category"
+        action: "Actions"
+      _word:
+        edit: "Edit word"
+        delete: "Delete"
+        delete_confirm: "Delete user confiromation"
+      edit:
+        edit: "Edit word"
+        label_update: "Update Word"
+        no_category: "You have no category! Create one now"
+        update: "Update"
+      index:
+        list: "Word List"
+        edit: "Edit word"
+        label_update: "Update Word"
+      new:
+        create: “Create”
+        label: "New Word"
+        title: "Create new word"
+        no_category: "You have no category! Create one now"
+      show:
+        bar_title: "Word"
+    caterories:
+      index:
+        list: "All Categories"
+        start: "start"
+  followers:
+    index:
+      empty: "user empty"
+      followers: "Followers"
+      number_followers: "%{number} user followers"
+      profile: "view my profile"
+  following:
+    index:
+      empty: "user empty"
+      following: "Following"
+      number_following: "follwing %{number} users"
+      profile: "view my profile"
+  sessions:
+    new:
+      login: "Log in"
+  static_page:
+    about:
+      about: “About”
+    home:
+      activities: "Activities"
+      home: “Home”
+      lesson: "Lesson"
+      login: "Log in"
+      pragraph: "We hope that my page will be useful with you"
+      signup: "Sign up now!"
+      welcome: "Welcome to our app"
+      word_list: "Word List"
+    contact:
+      contact: “Contact”
+    help:
+      help: “Help”
+  users:
+    show:
+      activities: "Activities"
+    index:
+      all: "All users"
+    _follow:
+      follow: "Follow"
+    _unfollow:
+      unfollow: "Unfollow"
+    edit:
+      change: "Save changes"
+      user: “Edit user”
+      update: "Update your profile"
+    new:
+      signup: "Sign Up"
+      create_account: "Create my account"
+  words:
+    _header_table:
+      english: "English"
+      vietnamese: "Vietnamese"
+      category: "Category"
+    show:
+      bar_title: "Word"
+    index:
+      list: “Word List”

@@ -21,29 +21,29 @@ class Admin::CateroriesController < ApplicationController
   def create
     @category = Caterory.new(category_params)
     if @category.save
-      flash[:success] = t("flash.success_created")
+      flash[:success] = t(".create_success")
       redirect_to [:admin, @category]
     else
-      flash.now[:danger] = t("flash.create_failed")
+      flash.now[:danger] = t(".create_fail")
       render :new
     end
   end
 
   def update
     if @category.update_attributes(word_params)
-      flash[:success] = t("category.update_success")
+      flash[:success] = t(".update_success")
       redirect_to [:admin, @category]
     else
-      flash.now[:danger] = t("category.update_failed")
+      flash.now[:danger] = t(".update_fail")
       render :edit
     end
   end
 
   def destroy
     if @category.destroy
-      flash[:success] = t("category.destroy")
+      flash[:success] = t(".destroy")
     else
-      flash[:danger] = t("category.destroy_failed")
+      flash[:danger] = t(".destroy_fail")
     end
     redirect_to admin_caterories_path
   end

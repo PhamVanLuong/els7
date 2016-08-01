@@ -7,4 +7,5 @@ maximum_name_category: 50
 maximum_ans: 4
 users_per_page: 10
 words_per_page: 10
+activity_per_page: 10
 paragraph: "20 words of caterory: "

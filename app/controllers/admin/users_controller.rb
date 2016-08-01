@@ -10,9 +10,9 @@ class Admin::UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     if @user.destroy
-      flash[:success] = t("user.delete")
+      flash[:success] = t(".delete")
     else
-      flash[:danger] = t("user.delete_fail")
+      flash[:danger] = t(".delete_fail")
     end
     redirect_to admin_users_path
   end

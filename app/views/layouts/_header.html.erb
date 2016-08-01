@@ -6,19 +6,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to t("title.base_title"), root_path, id: "logo", class: "navbar-brand" %>
+      <%= link_to t("view.header.base_title"), root_path, id: "logo", class: "navbar-brand" %>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to t("title.home"), root_path, class: "active" %></li>
-        <li><%= link_to t("title.help"), help_path, class: "active" %></li>
+        <li><%= link_to t("view.header.home"), root_path, class: "active" %></li>
+        <li><%= link_to t("view.header.help"), help_path, class: "active" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <%= t("header.language") %><b class="caret"></b>
+            <%= t("view.header.language") %><b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <li><%= link_to t("header.english"), locale: "en" %></li>
-            <li><%= link_to t("header.vietnamese"), locale: "vi" %></li>
+            <li><%= link_to t("view.header.english"), locale: "en" %></li>
+            <li><%= link_to t("view.header.vietnamese"), locale: "vi" %></li>
           </ul>
         </li>
       </ul>

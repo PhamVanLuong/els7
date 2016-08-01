@@ -14,7 +14,7 @@ class LessonsController < ApplicationController
     if @lesson.save
       redirect_to @lesson
     else
-      flash[:danger] = t("flash.failed_lesson")
+      flash[:danger] = t(".failed_lesson")
       redirect_to caterories_url
     end
   end

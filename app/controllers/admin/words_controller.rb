@@ -19,29 +19,29 @@ class Admin::WordsController < ApplicationController
   def create
     @word = Word.new(word_params)
     if @word.save
-      flash[:success] = t("flash.success_created")
+      flash[:success] = t(".create_success")
       redirect_to [:admin, @word]
     else
-      flash.now[:danger] = t("flash.create_failed")
+      flash.now[:danger] = t(".create_fail")
       render :new
     end
   end
 
   def update
     if @word.update_attributes(word_params)
-      flash[:success] = t("word.update_success")
-      redirect_to [:admin, @word]
+      flash[:success] = t(".update_success")
+      redirect_to admin_words_path
     else
-      flash.now[:danger] = t("word.update_failed")
+      flash.now[:danger] = t(".update_fail")
       render :edit
     end
   end
 
   def destroy
     if @word.destroy
-      flash[:success] = t("word.destroy")
+      flash[:success] = t(".destroy")
     else
-      flash[:danger] = t("word.destroy_failed")
+      flash[:danger] = t(".destroy_fail")
     end
     redirect_to admin_words_path
   end

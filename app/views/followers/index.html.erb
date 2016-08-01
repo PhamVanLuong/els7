@@ -1,22 +1,22 @@
-<% provide :title, t("follow.followers") %>
+<% provide :title, t(".followers") %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1><%= @user.name %></h1>
-      <span><%= link_to t("follow.profile"), @user %></span>
+      <span><%= link_to t(".profile"), @user %></span>
     </section>
     <section class="stats">
       <%= render "shared/stats" %>
     </section>
   </aside>
   <div class="col-md-8">
-    <h3><%= t("follow.followers") %></h3>
+    <h3><%= t(".followers") %></h3>
     <h5>
-      <%= t "follow.number_followers", number: @users.count %>
+      <%= t ".number_followers", number: @users.count %>
     <h5>
     <ul class="users">
       <% if @users.empty? %>
-        <h2><%= t("user.empty") %></h2>
+        <h2><%= t(".followers.empty") %></h2>
       <% else %>
         <%= render @users %>
       <% end %>

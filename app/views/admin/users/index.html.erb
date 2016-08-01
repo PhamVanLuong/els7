@@ -1,6 +1,6 @@
-<% provide(:title, t("admin.user_all")) %>
+<% provide(:title, t(".user_all")) %>
 <div class="table-title">
-  <h1><%= t("admin.user_all") %></h1>
+  <h1><%= t(".user_all") %></h1>
 </div>
 
 <div class="page-center">
@@ -12,8 +12,8 @@
     <li>
       <%= link_to user.name, user %>
       <% if current_user.admin? && !current_user?(user) %>
-        | <%= link_to t("admin.delete"), [:admin, user], method: :delete,
-          data: {confirm: t("admin.admin_confirm")} %>
+        | <%= link_to t(".delete"), [:admin, user], method: :delete,
+          data: {confirm: t(".delete_confirm")} %>
       <% end %>
     </li>
   <% end %>
