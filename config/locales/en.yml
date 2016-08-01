@@ -15,6 +15,7 @@ en:
     start: "Started "
     ago: " ago"
   category:
+    complete: "You already complete this category"
     delete: "Delete"
     destroy: "Delete successfully"
     destroy_failed: "Delete failed"
@@ -23,11 +24,13 @@ en:
     no_category: "You have no category! Create one now"
     no_word: "This category has no word! Create now"
     title: "Create new category"
-    start: "start"
+    start: "Start"
     update_failed: "Update failed"
     update_success: "Update successfully"
+  checks:
+    done: "Your test was done!"
   edit:
-    edit:change: "Save changes"
+    change: "Save changes"
     user: Edit user
     update: "Update your profile"
     update_profile: "Profile updated"
@@ -37,13 +40,13 @@ en:
   flash:
     create_failed: "Failed to create"
     danger: "Please log in."
-    failed_lesson: "You already complete this category"
     success_created: "Created successfully"
     update_fail: "Error update"
     welcome: "Sign up successfully! Welcome to my page"
   form:
     create: "Create"
     update: "Update"
+    answer: "Answer"
   footer:
     small: "Project 1 - G team"
   header:
@@ -56,6 +59,11 @@ en:
     welcome: "Welcome to our app"
   index:
     all: "All users"
+  lesson:
+    request: "Find and choose the correct meaning of these words given below:"
+    complete: "You've already learned all of words in this category! 
+      Go to other category to continue"
+    keep_learning: "Click here to learn other lesson"  
   login:
     remember: "Remember me on this computer"
   new:
@@ -69,6 +77,7 @@ en:
     login: "Log in"
     signup: "Sign Up"
   user:
+    access_admin: "You can't access this acction"
     ancount: "Ancount"
     categories: "Categorories"
     delete: "Delete success"
@@ -93,6 +102,8 @@ en:
     label_update: "Update Word"
     list: "Word List"
     title: "Create new word"
+    result: "Result"
+    results: "Results"
     update_failed: "Update failed"
     update_success: "Update successfully"
     vietnamese: "Vietnamese"

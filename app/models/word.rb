@@ -1,7 +1,7 @@
 class Word < ActiveRecord::Base
   after_create :add_answers
 
-  has_many :results
+  has_many :results, dependent: :destroy
   has_many :answers, dependent: :destroy
   
   belongs_to :caterory
@@ -22,4 +22,11 @@ class Word < ActiveRecord::Base
   def self.random_answer
     Word.all.sample.meaning
   end
+
+  def id_to_symbol
+    self.id.to_s.to_s
+  end
+
+  scope :not_learned, ->(current_user_id){
+    where("words.id not in (select word_id from results where user_id = ?)", current_user_id)}
 end

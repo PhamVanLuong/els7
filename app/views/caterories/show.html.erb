@@ -5,11 +5,9 @@
     <thead>
       <%= render "words/header_table" %>
     </thead>
-    <%= will_paginate %>
+    <%= will_paginate(@words) %>
     <tbody>
-      <tr class="info">
-        <%= render @words %>
-      </tr>
+      <%= render @words %>
     </tbody>
   </table>
 <% end %>

@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
     foreign_key: "followed_id", dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :learned_words, through: :results, source: :word
 
   validates :name, presence: true, length: {maximum: Settings.maximum_name}
   validates :email, presence: true, length: {maximum: Settings.maximum_email},

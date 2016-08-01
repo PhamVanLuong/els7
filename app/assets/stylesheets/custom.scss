@@ -227,3 +227,28 @@ aside {
   display: inline-block;
   font-size: 16px;
 }
+
+#set-radio {
+  input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 50%;
+    margin-bottom: 15px;
+    @include box_sizing;
+  }
+  input {
+    height: auto !important;
+  }
+}
+#size-result {
+  font-size: 200%;
+}
+
+#complete {
+  font-size: 75%;
+  color: purple;
+}
+
+#complete_admin {
+  font-size: 40%;
+  color: purple;
+}

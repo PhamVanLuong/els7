@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   resources :lessons, only: [:create, :show, :index]
   resources :words, only: [:index, :show]
   resources :relationships, only: [:create, :destroy]
+  resources :checks, only: :create
 end

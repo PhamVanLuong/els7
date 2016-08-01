@@ -7,15 +7,13 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find_by(id: params[:id])
+    @words = @lesson.learned_words
   end
 
   def create
     @lesson = current_user.lessons.build(caterory_id: params[:caterory_id])
     if @lesson.save
       redirect_to @lesson
-    else
-      flash[:danger] = t("flash.failed_lesson")
-      redirect_to caterories_url
     end
   end
 end
