@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   enum role: [:guest, :admin]
 
-  has_many :lessons
+  has_many :lessons, dependent: :destroy
   has_many :results, dependent: :destroy
   has_many :activities, dependent: :destroy
   has_many :active_relationships, class_name: "Relationship",

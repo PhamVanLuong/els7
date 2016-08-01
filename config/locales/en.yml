@@ -3,9 +3,9 @@ en:
     admin_confirm: "Delete user confiromation"
     categories: "Categorories"
     delete: "delete"
-    home: "Home"
-    logo: "ADMIN ELS7"
     logout: "Logout"
+    profile: "Profile"
+    settings: "Settings"
     users: "Users"
     user_all: "All users"
     words: "Words"
@@ -15,12 +15,17 @@ en:
     start: "Started "
     ago: " ago"
   category:
+    delete: "Delete"
+    destroy: "Delete successfully"
+    destroy_failed: "Delete failed"
     label: "New Category"
     list: "All Categories"
     no_category: "You have no category! Create one now"
     no_word: "This category has no word! Create now"
     title: "Create new category"
     start: "start"
+    update_failed: "Update failed"
+    update_success: "Update successfully"
   edit:
     edit:change: "Save changes"
     user: Edit user
@@ -65,6 +70,7 @@ en:
     signup: "Sign Up"
   user:
     ancount: "Ancount"
+    categories: "Categorories"
     delete: "Delete success"
     delete_fail: "Delete error"
     empty: "user empty"

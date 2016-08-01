@@ -1,2 +1,15 @@
 <%= provide(:title, @category.name) %>
 <h1><%= @category.name %></h1>
+<% if @words.present? %>
+  <table class="table">
+    <thead>
+      <%= render "words/header_table" %>
+    </thead>
+    <%= will_paginate %>
+    <tbody>
+      <tr class="info">
+        <%= render @words %>
+      </tr>
+    </tbody>
+  </table>
+<% end %>

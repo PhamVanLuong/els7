@@ -2,21 +2,11 @@
 <h1><%= t("word.list") %></h1>
 
 <table class="table">
-  <thead>
-    <tr>
-      <th><%= t("word.english") %></th>
-      <th><%= t("word.vietnamese") %></th>
-      <th><%= t("word.category") %></th>
-    </tr>
-  </thead>
+  <thread>
+    <%= render "header_table" %>
+  </thread>
   <%= will_paginate %>
   <tbody>
-    <% @words.each do |word| %>
-      <tr class="info">
-        <td><%= word.learning_word %></td>
-        <td><%= word.meaning %></td>
-        <td><%= word.caterory.name %></td>
-      </tr>
-    <% end %>
+    <%= render @words %>
   </tbody>
 </table>
