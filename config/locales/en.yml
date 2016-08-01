@@ -9,6 +9,11 @@ en:
     users: "Users"
     user_all: "All users"
     words: "Words"
+  activity:
+    activities: "Activities"
+    learn: "Learn "
+    start: "Started "
+    ago: " ago"
   category:
     label: "New Category"
     list: "All Categories"

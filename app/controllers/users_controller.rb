@@ -37,6 +37,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @activities = @user.activities.paginate(page: params[:page],
+      per_page: Settings.users_per_page)
   end
 
   private

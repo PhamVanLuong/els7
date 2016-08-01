@@ -1,0 +1,6 @@
+<li id="activities">
+  <p><%= link_to (t("activity.learn") + activity.lesson.name), lesson_path(activity.lesson) %></p>
+  <span class="timestamp">
+    <%= t("activity.start") + time_ago_in_words(activity.created_at) + t("activity.ago") %>
+  </span>
+</li>
