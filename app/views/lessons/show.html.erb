@@ -1,2 +1,80 @@
 <%= provide(:title, @lesson.name) %>
 <% @lesson.name %>
+<% provide :title, t("views.lesson.lesson_name") %>
+<h1 style="color: blue;">
+  <%= @lesson.category.name %>
+</h1>
+<div class="row">
+  <aside class="center">
+    <section >
+      <h2>
+        <%= t "views.lesson.lesson_name" %>
+        <%= @lesson.id %>
+      </h2>
+    </section>
+  </aside>
+</div>
+<div class="row">
+  <section>
+    <% if @lesson.is_completed? %>
+      <div class="col-md-6 col-md-offset-3">
+        <strong style="font-size:30px; color: red;">
+          <%= t ".score:" %>
+          <%= @lesson.lesson_words.correct_answer.count %>
+            / <%= @lesson.lesson_words.count %>
+        </strong>
+        <%= form_for @lesson do |f| %>
+          <%= f.hidden_field :is_completed, value: false %>
+          <%= f.fields_for :lesson do |builder| %>
+            <div class="lesson_form">
+              <strong><%= builder.word.learning_word %></strong>
+              <br/>
+              <div>
+                <% builder.word.answers.each do |word_answer| %>
+                  <%= builder.radio_button :answer_id, answer.id,
+                    disabled: true %>
+                  <%= answer.mean %>
+                  <%= builder.hidden_field :word_id %>
+                <% end %>
+                <br>
+                <% if builder.object.word_answer &&
+                  builder.object.word_answer.is_correct? %>
+                  <span style="color:green;">Correct!</span>
+                <% else %>
+                  <span style="color:red;">
+                    <%= t "views.lessons.show.wrong_answer" %>
+                    <strong><%= builder.object.word.answer.content %></strong>
+                  </span>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% else %>
+      <%= form_for @lesson do |f| %>
+        <%= f.hidden_field :is_completed, value: true %>
+        <%= f.fields_for :words do |builder| %>
+          <div class="col-md-12 lesson_form">
+          <!-- lay 1 tu random ra -->
+            <strong><%= builder.word.learning_word %></strong>l
+            <br/>
+            <!-- lay them 4 answer -->
+            <% builder.word.word_answers.each do |word_answer| %>
+              <br/>
+              <%= builder.radio_button :answer_id, answer.id %>
+              <%= word_answer.mean %>
+              <%= builder.hidden_field :word_id %>
+              <br/>
+              <br/>
+            <% end %>
+          </div>
+        <% end %>
+        <%= f.submit t("views.lesson.save"), class: "btn btn-primary",
+          data: {confirm: t("views.lessons.submit")} %>
+      <% end %>
+    <% end %>
+    <div class="clearfix"></div>
+    <div><%= link_to t(".back"), categories_path, class: "btn btn-default" %></div>
+  </section>
+</div>
