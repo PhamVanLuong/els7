@@ -25,6 +25,6 @@ end
 
 Caterory.all.each do |caterory|
   50.times do |n|
-    caterory.words.create!(learning_word: "GG", meaning: "BoBo")
+    caterory.words.create!(learning_word: "GG#{n}", meaning: "BoBo#{n}")
   end
 end

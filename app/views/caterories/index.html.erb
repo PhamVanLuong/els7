@@ -6,13 +6,17 @@
     <div class="well well-lg">
       <div class="row" id="category">
         <div class="col col-md-4">
-          <%= link_to category.name, [:admin, category] %>
+          <%= link_to category.name, category %>
         </div>  
         <div class="col col-md-4" id="button-color">
-          <button type="button" class="btn btn-info btn-lg">
-            <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
-              method: :post %>
-         </button>
+          <% if category.words.not_learned(current_user.id).present? %>
+            <button type="button" class="btn btn-info btn-lg">
+              <%= link_to t("category.start"), lessons_path(caterory_id: category.id),
+                method: :post %>
+            </button>
+          <% else %>
+            <p id="complete"><%= t("category.complete") %></p>
+          <% end %>    
         </div>
       </div>
     </div>

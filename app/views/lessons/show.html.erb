@@ -1,2 +1,39 @@
 <%= provide(:title, @lesson.name) %>
-<% @lesson.name %>
+<% if @lesson.check == Settings.check_lesson %>
+  <h1><%= t("words.results") %></h1>
+  <%= render "result" %>
+<% elsif @lesson.learned_words.empty? %>
+  <h2><%= t("lesson.complete") %></h2>
+<% else %>
+  <p><%= t("lesson.request") %></p>
+  <div class="col-md-6">
+    <%= form_for(:check, url: checks_path, html: {id: "set-radio"}) do |f| %>
+      <% @words.each do |word| %>
+        <div class="row">
+          <div class="well well-lg">
+            <div class="col-md-1">
+              <%= get_word_index(@lesson, word.id) %>
+            </div>
+            <div class="col-md-11">
+              <%= word.learning_word %>              
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="well well-lg">
+            <% word.answers.each do |answer| %>
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <%= f.radio_button word.id.to_s, answer.mean %>
+                  <%= answer.mean %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+      <%= f.submit t("form.answer"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+<% end %>

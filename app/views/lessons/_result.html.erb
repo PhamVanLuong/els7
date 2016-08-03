@@ -1,0 +1,37 @@
+<p id="size-result"><%= @lesson.results.find_correct(1).count %> / 
+  <%= @words.count %> </p>
+<table class="table">
+  <thread>
+    <tr>
+      <th><%= t("word.english") %></th>
+      <th><%= t("word.vietnamese") %></th>
+      <th><%= t("word.result") %></th>
+    </tr>
+  </thread>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr class="info">
+        <td><%= word.learning_word %></td>
+        <td><%= word.meaning %></td>
+        <td>
+          <% if @lesson.results.find_by(word_id: word.id).status == Settings.right_answer %>
+            <%= image_tag("correct.png", size: "20x15",) %>
+          <% else %>
+            <%= link_to(image_tag("incorrect.png", size: "20x15"), word) %>  
+          <% end %>  
+        </td>
+      </tr> 
+    <% end %> 
+  </tbody>
+</table>
+<div class="row">
+  <% if current_user.admin? %>
+    <button class="btn btn-md-primary">
+      <%= link_to t("lesson.keep_learning"), admin_caterories_path(@lesson.caterory.id) %>
+    </button>
+  <% else %>
+    <button class="btn btn-md-primary">
+      <%= link_to t("lesson.keep_learning"), caterories_path(@lesson.caterory.id) %>
+    </button>
+  <% end %>
+</div>
