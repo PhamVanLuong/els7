@@ -1,12 +1,12 @@
-# class UsersController < ApplicationController
-#   before_action :logged_in_user, only: [:index, :edit, :update]
+class UsersController < ApplicationController
+  before_action :authenticate_user!, only: [:index]
 #   before_action :correct_user, only: [:edit, :update]
 #   before_action :load_user, only: [:show, :edit, :update]
 
-#   def index
-#     @users = User.paginate page: params[:page],
-#       per_page: Settings.users_per_page
-#   end
+  def index
+    @users = User.paginate page: params[:page],
+      per_page: Settings.users_per_page
+  end
 
 #   def create
 #     @user = User.new(user_params)
@@ -36,10 +36,11 @@
 #     end
 #   end
 
-#   def show
-#     @activities = @user.activities.paginate(page: params[:page],
-#       per_page: Settings.users_per_page)
-#   end
+  def show
+    @user = User.find_by(id: params[:id])
+    @activities = @user.activities.paginate(page: params[:page],
+      per_page: Settings.users_per_page)
+  end
 
 #   private
 
@@ -56,4 +57,4 @@
 #   def load_user
 #     @user = User.find_by(id: params[:id])
 #   end
-# end
+end

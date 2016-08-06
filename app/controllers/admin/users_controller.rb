@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-  before_action :access_admin, :logged_in_user
+  before_action :access_admin, :authenticate_user!
  
   def index
     @user = User.find_by(id: params[:id])

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # post "login"    => "sessions#create"
   # delete "logout" => "sessions#destroy"
 
-  resources :users do
+  resources :users, only: [:index, :show] do
     resources :followers, only: [:index]
     resources :followings, only: [:index]
   end
