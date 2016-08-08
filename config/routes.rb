@@ -15,16 +15,16 @@ Rails.application.routes.draw do
     resources :followings, only: [:index]
   end
 
-  namespace :admin do
-    root "users#index"
-    resources :users, only: [:index, :destroy]
-    resources :words
-    resources :caterories
-  end
+  # namespace :admin do
+  #   root "users#index"
+  #   resources :users, only: [:index, :destroy]
+  #   resources :words
+  #   resources :caterories
+  # end
 
-  resources :caterories, only: [:index, :show]
+  resources :caterories
   resources :lessons, only: [:create, :show, :index]
-  resources :words, only: [:index, :show]
+  resources :words
   resources :relationships, only: [:create, :destroy]
   resources :checks, only: :create
 end

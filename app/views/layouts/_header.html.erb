@@ -23,11 +23,7 @@
         </li>
       </ul>
       <% if user_signed_in? %>
-        <% if current_user.admin? %>
-          <%= render "layouts/header_admin" %>
-        <% else %>
-          <%= render "layouts/header_login" %>
-        <% end %>
+        <%= render "layouts/header_login" %>
       <% else %>
         <%= render "layouts/header_no_login" %>
       <% end %>

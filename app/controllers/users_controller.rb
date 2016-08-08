@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
+  load_and_authorize_resource
 #   before_action :correct_user, only: [:edit, :update]
 #   before_action :load_user, only: [:show, :edit, :update]
 
   def index
+    @user = User.find_by(id: params[:id])
     @users = User.paginate page: params[:page],
       per_page: Settings.users_per_page
   end
@@ -40,6 +42,22 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @activities = @user.activities.paginate(page: params[:page],
       per_page: Settings.users_per_page)
+  end
+
+  # def index
+  #   @user = User.find_by(id: params[:id])
+  #   @users = User.paginate page: params[:page],
+  #     per_page: Settings.users_per_page
+  # end
+ 
+  def destroy
+    @user = User.find_by(id: params[:id])
+    if @user.destroy
+      flash[:success] = t("user.delete")
+    else
+      flash[:danger] = t("user.delete_fail")
+    end
+    redirect_to admin_users_path
   end
 
 #   private

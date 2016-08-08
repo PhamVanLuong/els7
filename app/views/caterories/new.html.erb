@@ -1,9 +1,9 @@
-<!--<% provide(:title, t("category.title")) %>
+<% provide(:title, t("category.title")) %>
 <h1><%= t("category.label") %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for [:admin, @category] do |f| %>
+    <%= form_for @category do |f| %>
       <%= render "shared/error_messages", object: f.object %>
 
       <%= f.label :name %>
@@ -13,4 +13,3 @@
     <% end %>
   </div>
 </div>
--->

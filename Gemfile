@@ -14,6 +14,7 @@ gem "faker", "~> 1.6.5"
 gem "will_paginate", "3.1.0"
 gem "bootstrap-will_paginate", "0.0.10"
 gem "devise", ">= 3.5.6"
+gem "cancancan", "~> 1.10"
 
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "bcrypt", "~> 3.1.7"

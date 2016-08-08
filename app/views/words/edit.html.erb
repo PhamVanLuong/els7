@@ -1,9 +1,9 @@
-<!--<%= provide(:title, t("word.title")) %>
-<h1><%= t("word.label") %></h1>
+<%= provide(:title, t("word.edit")) %>
+<h1><%= t("word.label_update") %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for [:admin, @word] do |f| %>
+    <%= form_for @word do |f| %>
       <%= render "shared/error_messages", object: f.object %>
 
       <%= f.label :word %>
@@ -23,8 +23,7 @@
         <% end %>
       </div>
 
-      <%= f.submit t("form.create"), class: "btn btn-primary" %>
+      <%= f.submit t("form.update"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
--->
