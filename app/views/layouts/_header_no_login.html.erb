@@ -11,4 +11,8 @@
       <%= t("title.login") %>
     <% end %>
   </li>
+  <li>
+    <%= link_to t("title.facebook"),
+      user_facebook_omniauth_authorize_path %>
+  </li>
 </ul>

@@ -20,9 +20,12 @@ class ApplicationController < ActionController::Base
   # end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit(:name, :email, :password, :password_confirmation)
+    devise_parameter_sanitizer.permit(:sign_in) do |user_params|
+      user_params.permit(:name, :password, :remember_me)
     end
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
+      user_params.permit(:first_name, :last_name, :name, :email, :password, :password_confirmation, :remember_me)
+    end
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :name])
   end
 end

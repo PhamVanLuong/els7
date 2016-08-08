@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # match 'auth/:provider/callback', to: 'sessions#create'
+  # match 'auth/failure', to: redirect('/')
+  devise_for :users, controllers: {registrations: "users/registrations",
+    omniauth_callbacks: "users/omniauth_callbacks", sessions: "users/sessions"}
   root "static_pages#home"
   get "home"      => "static_pages#home"
   get "help"      => "static_pages#help"
